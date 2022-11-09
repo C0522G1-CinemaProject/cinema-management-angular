@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeModule} from "./home/home.module";
-import {EmployeeModule} from "./employee/employee.module";
-import {MovieModule} from "./movie/movie.module";
-import {PromotionModule} from "./promotion/promotion.module";
-import {RegisterModule} from "./register/register.module";
-import {RoomModule} from "./room/room.module";
-import {TicketModule} from "./ticket/ticket.module";
-import {DecentralizationModule} from "./decentralization/decentralization.module";
+import {HomeModule} from "./component/home/home.module";
+import {EmployeeModule} from "./component/employee/employee.module";
+import {MovieModule} from "./component/movie/movie.module";
+import {PromotionModule} from "./component/promotion/promotion.module";
+import {RegisterModule} from "./component/register/register.module";
+import {RoomModule} from "./component/room/room.module";
+import {TicketModule} from "./component/ticket/ticket.module";
+import {DecentralizationModule} from "./component/decentralization/decentralization.module";
 
 const routes: Routes = [
   {
