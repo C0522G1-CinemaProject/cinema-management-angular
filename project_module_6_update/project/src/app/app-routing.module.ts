@@ -9,6 +9,7 @@ import {RoomModule} from "./component/room/room.module";
 import {TicketModule} from "./component/ticket/ticket.module";
 import {DecentralizationModule} from "./component/decentralization/decentralization.module";
 import {AuthGuard} from "./component/decentralization/auth.guard";
+import {StatementManagementModule} from "./component/statement-management/statement-management.module";
 
 const routes: Routes = [
   {
@@ -47,9 +48,12 @@ const routes: Routes = [
   {
     path: "ticket", loadChildren: () => TicketModule,
     canActivate: [AuthGuard]
+  },{
+    path: 'statement', loadChildren: () => StatementManagementModule
+
   },
   {
-    path: 'login', loadChildren: () => DecentralizationModule,
+    path: 'login', loadChildren: () => DecentralizationModule
   }
 ];
 
