@@ -1,8 +1,10 @@
 import {Customer} from "./Customer";
+import {SeatDetail} from "./seat-detail";
 
 export interface Ticket {
   id?: number,
-  statusTicket?: string,
+  statusTicket?: number,
   customer?: Customer,
-  seatDetail?: string
+  seatDetail?: SeatDetail,
+  ticketBookingTime?: string;
 }

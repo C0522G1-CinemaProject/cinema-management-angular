@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 import {TokenStorageService} from "../../service/token-storage.service";
 import {AuthService} from "../../service/auth.service";
 import {ShareService} from "../../service/share.service";
-import {style} from "@angular/animations";
 
 @Component({
   selector: 'app-login',
@@ -29,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.formGroup = this.formBuild.group({
         username: [''],
         password: [''],
-      rememberMe: ['']
+        rememberMe: ['']
       }
     );
   }
@@ -64,7 +63,7 @@ export class LoginComponent implements OnInit {
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: '*** '+this.username+' *** '+' Đăng nhập thành công !',
+          title: '*** ' + this.username + ' *** ' + ' Đăng nhập thành công !',
           showConfirmButton: false,
           timer: 1000
         })
