@@ -13,10 +13,11 @@ import {RoomModule} from "./component/room/room.module";
 import {TicketModule} from "./component/ticket/ticket.module";
 import {FormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +32,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     RoomModule,
     TicketModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

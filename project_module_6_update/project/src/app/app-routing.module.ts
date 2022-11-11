@@ -34,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'promotion', loadChildren: () => PromotionModule,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'register', loadChildren: () => RegisterModule,

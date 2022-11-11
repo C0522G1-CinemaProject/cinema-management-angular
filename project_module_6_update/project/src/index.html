@@ -21,4 +21,21 @@
 <body>
   <app-root></app-root>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  $(".upload-wrap input[type=file]").change(function () {
+    var id = $(this).attr("id");
+    var newimage = new FileReader();
+    newimage.readAsDataURL(this.files[0]);
+    newimage.onload = function (e) {
+      $(".uploadpreview." + id).css(
+        "background-image",
+        "url(" + e.target.result + ")"
+      );
+    };
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </html>
