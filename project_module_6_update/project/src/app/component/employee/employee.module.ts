@@ -11,7 +11,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule
+    EmployeeRoutingModule,
   ]
 })
 export class EmployeeModule { }

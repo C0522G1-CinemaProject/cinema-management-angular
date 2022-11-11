@@ -1,4 +1,4 @@
-import {User} from "./User";
+import {IUser} from "./IUser";
 
 export interface Employee {
   id?: number,
@@ -7,7 +7,7 @@ export interface Employee {
   email?: string,
   address?: string,
   phoneNumber?: string,
-  userName?: User,
+  userName?: IUser,
   idCard?: string,
   dayOfBirth?: string,
   image?: string

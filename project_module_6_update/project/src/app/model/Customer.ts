@@ -1,4 +1,4 @@
-import {User} from "./User";
+import {IUser} from "./IUser";
 import {CustomerType} from "./CustomerType";
 
 export interface Customer {
@@ -10,6 +10,6 @@ export interface Customer {
   email?: string,
   address?: string,
   phoneNumber?: string,
-  userName?: User
+  userName?: IUser
   customerType?: CustomerType
 }

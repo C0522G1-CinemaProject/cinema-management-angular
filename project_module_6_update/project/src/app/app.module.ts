@@ -11,6 +11,8 @@ import {PromotionModule} from "./component/promotion/promotion.module";
 import {RegisterModule} from "./component/register/register.module";
 import {RoomModule} from "./component/room/room.module";
 import {TicketModule} from "./component/ticket/ticket.module";
+import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import {TicketModule} from "./component/ticket/ticket.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     DecentralizationModule,
     EmployeeModule,
     HomeModule,
@@ -26,7 +29,8 @@ import {TicketModule} from "./component/ticket/ticket.module";
     PromotionModule,
     RegisterModule,
     RoomModule,
-    TicketModule
+    TicketModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

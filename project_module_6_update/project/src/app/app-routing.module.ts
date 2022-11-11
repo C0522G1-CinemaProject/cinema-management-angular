@@ -8,31 +8,48 @@ import {RegisterModule} from "./component/register/register.module";
 import {RoomModule} from "./component/room/room.module";
 import {TicketModule} from "./component/ticket/ticket.module";
 import {DecentralizationModule} from "./component/decentralization/decentralization.module";
+import {AuthGuard} from "./component/decentralization/auth.guard";
 
 const routes: Routes = [
   {
     path: 'home', loadChildren: () => HomeModule,
+    canActivate: [AuthGuard],
+    data:{
+      roles: ['ROLE_Employee','ROLE_Admin','ROLE_Customer','']
+    }
   },
   {
-    path: 'employee', loadChildren: () => EmployeeModule
+    path: 'employee', loadChildren: () => EmployeeModule,
+    canActivate: [AuthGuard],
+    data:{
+      roles: ['ROLE_Employee','ROLE_Admin']
+    }
   },
   {
-    path: 'movie', loadChildren: () => MovieModule
+    path: 'movie', loadChildren: () => MovieModule,
+    canActivate: [AuthGuard],
+    data:{
+      roles: ['ROLE_Employee','ROLE_Admin','ROLE_Customer']
+    }
   },
   {
-    path: 'promotion', loadChildren: () => PromotionModule
+    path: 'promotion', loadChildren: () => PromotionModule,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'register', loadChildren: () => RegisterModule
+    path: 'register', loadChildren: () => RegisterModule,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'room', loadChildren: () => RoomModule
+    path: 'room', loadChildren: () => RoomModule,
+    canActivate: [AuthGuard]
   },
   {
-    path: "ticket", loadChildren: () => TicketModule
+    path: "ticket", loadChildren: () => TicketModule,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'login', loadChildren: () => DecentralizationModule
+    path: 'login', loadChildren: () => DecentralizationModule,
   }
 ];
 
