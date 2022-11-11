@@ -6,12 +6,16 @@ import {LoginComponent} from "./login/login.component";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ResetPasswordComponent} from "./reset-password/reset-password.component";
+import {VerifyResetPasswordComponent} from "./verify-reset-password/verify-reset-password.component";
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent,ResetPasswordComponent, VerifyResetPasswordComponent],
   exports: [
-    LoginComponent
+    LoginComponent,
+    ResetPasswordComponent,
+    VerifyResetPasswordComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,6 @@
 export interface Room {
   id?: number,
   name?: string,
-  numberOfSeat?: number
+  numberOfSeat?: number,
+  maximumSeatsInRoom?: number
 }
