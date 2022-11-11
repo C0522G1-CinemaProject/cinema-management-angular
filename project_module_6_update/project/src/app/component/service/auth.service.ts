@@ -51,11 +51,11 @@ export class AuthService {
   //   }, this.httpOptions);
   // }
 
-  // verifyPassword(code: string): Observable<any> {
-  //   return this.http.post(AUTH_API + 'verify-password', {
-  //     code: code
-  //   }, this.httpOptions);
-  // }
+  verifyPassword(code: string): Observable<any> {
+    return this.http.post(AUTH_API + 'verify-password', {
+      code: code
+    }, this.httpOptions);
+  }
 
   resetPassword(username:string): Observable<any> {
     return this.http.post(AUTH_API + 'reset-password', {
@@ -69,4 +69,5 @@ export class AuthService {
       code: code
     }, this.httpOptions);
   }
+
 }
