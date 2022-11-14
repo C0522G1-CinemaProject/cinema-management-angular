@@ -17,8 +17,22 @@
   <link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
   <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--  <script src="assets/js/confirm-ticket.js"></script>-->
 </head>
 <body>
   <app-root></app-root>
 </body>
+<script>
+  let btnConfirm = document.getElementById('confirm');
+  let titleBooking = document.getElementById('accountBooking');
+  let noteConfirm = document.getElementById('note');
+
+  btnConfirm.addEventListener('click', () => {
+    titleBooking.innerText = 'Thông tin tài khoản đặt vé';
+    noteConfirm.innerHTML = '<i>Vui lòng đến lấy vé trước thời gian chiếu phim 30 phút. Sau thời gian đó vé sẽ tự động hủy !</li>';
+    btnConfirm.innerHTML = '<button style="transform: translateX(-6px)" title=\'How PayPal Works\'\n onclick="javascript:window.open(\'https://www.sandbox.paypal.com/checkoutnow?sessionID=uid_39c7fa19b8_mdi6mzg6mti&buttonSessionID=uid_a35ed17b5a_mdi6ntg6mdm&stickinessID=uid_1b80682fbd_mtq6mdu6mdk&inlinexo=false&smokeHash=&fundingSource=paypal&buyerCountry=VN&locale.x=vi_VN&commit=true&enableFunding.0=venmo&clientID=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&env=sandbox&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9c2ImZW5hYmxlLWZ1bmRpbmc9dmVubW8mY3VycmVuY3k9VVNEIiwiYXR0cnMiOnsiZGF0YS1zZGstaW50ZWdyYXRpb24tc291cmNlIjoiYnV0dG9uLWZhY3RvcnkiLCJkYXRhLXVpZCI6InVpZF96aHV1bGxtaWxmaXVtY3djamhsZHpyb215bW91eHIifX0&xcomponent=1&version=5.0.338&token=0FL54204C7273014U\',\'WIPaypal\',\'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700\'); return false;"\n' +
+      'class="button btnGreen">Thanh toán\n </button>';
+
+  })
+</script>
 </html>

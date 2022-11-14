@@ -13,10 +13,14 @@ import {RoomModule} from "./component/room/room.module";
 import {TicketModule} from "./component/ticket/ticket.module";
 import {FormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {
+  ConfirmBookingTicketInformationComponent
+} from "./component/ticket/confirm-booking-ticket-information/confirm-booking-ticket-information.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConfirmBookingTicketInformationComponent
   ],
   imports: [
     BrowserModule,

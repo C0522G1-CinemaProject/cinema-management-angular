@@ -6,4 +6,5 @@ export interface Ticket {
   customer?: Customer,
   seatDetail?: string,
   ticketBookingTime?: string;
+  room?: string;
 }
